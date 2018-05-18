@@ -9,12 +9,15 @@
  * Information and shall use it only in accordance with the terms of the
  * license agreement you entered into with hybris.
  *
- *  
+ *
  */
 package org.training.fulfilmentprocess.impl;
 
 import de.hybris.platform.core.model.order.AbstractOrderEntryModel;
 import de.hybris.platform.core.model.order.OrderModel;
+import de.hybris.platform.core.model.user.CustomerModel;
+import de.hybris.platform.util.Config;
+
 import org.training.fulfilmentprocess.CheckOrderService;
 
 
@@ -50,7 +53,7 @@ public class DefaultCheckOrderService implements CheckOrderService
 	{
 		if (order.getDeliveryMode() == null)
 		{
-			// Order must have an overall delivery mode 
+			// Order must have an overall delivery mode
 			return false;
 		}
 
@@ -67,5 +70,44 @@ public class DefaultCheckOrderService implements CheckOrderService
 		}
 
 		return true;
+	}
+
+	/*
+	 * (non-Javadoc)
+	 *
+	 * @see org.training.fulfilmentprocess.CheckOrderService#checkLuckyUser(de.hybris.platform.core.model.order.OrderModel)
+	 */
+	@Override
+	public boolean checkLuckyUser(final OrderModel order)
+	{
+		final int counter = getCounter();
+
+		if (Integer.getInteger(order.getCode()).intValue() % counter == 0)
+		{
+
+			final CustomerModel customerModel = (CustomerModel) order.getUser();
+			customerModel.setIsLucky(Boolean.TRUE);
+			return true;
+
+		}
+		return false;
+	}
+
+	/**
+	 * @return
+	 */
+	private int getCounter()
+	{
+		int counter;
+		try
+		{
+			counter = Integer.parseInt(Config.getParameter("trainingfulfilmentprocess.parameter.counter"));
+		}
+		catch (final NumberFormatException e)
+		{
+			counter = 60 * 60;
+		}
+		return counter;
+
 	}
 }

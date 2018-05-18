@@ -9,7 +9,7 @@
  * Information and shall use it only in accordance with the terms of the
  * license agreement you entered into with hybris.
  *
- *  
+ *
  */
 package org.training.fulfilmentprocess;
 
@@ -22,4 +22,6 @@ import de.hybris.platform.core.model.order.OrderModel;
 public interface CheckOrderService
 {
 	boolean check(OrderModel order);
+
+	boolean checkLuckyUser(OrderModel order);
 }

@@ -30,6 +30,10 @@
 	<bean id="checkOrderAction" class="org.training.fulfilmentprocess.actions.order.CheckOrderAction"  parent="abstractAction">
 		<property name="checkOrderService" ref="checkOrderService"/>
 	</bean>
+	
+	<bean id="checkLuckyUserAction" class="org.training.fulfilmentprocess.actions.order.CheckLuckyUserAction"  parent="abstractAction">
+		<property name="checkOrderService" ref="checkOrderService"/>
+	</bean>
 
 	<bean id="cancelWholeOrderAuthorizationAction" class="org.training.fulfilmentprocess.actions.order.CancelWholeOrderAuthorizationAction"
             parent="abstractAction">

@@ -55,8 +55,8 @@ public class CheckLuckyUserAction extends AbstractSimpleDecisionAction<OrderProc
 		}
 		else
 		{
-			setOrderStatus(order, OrderStatus.CHECKED_INVALID);
-			return Transition.NOK;
+			setOrderStatus(order, OrderStatus.CHECKED_VALID);
+			return Transition.OK;
 		}
 	}
 

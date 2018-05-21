@@ -69,7 +69,9 @@
 	<!-- Performs some basic validation for the order as part of the first stage of the process. -->
 
 	<alias name="defaultCheckOrderService" alias="checkOrderService"/>
-	<bean id="defaultCheckOrderService" class="org.training.fulfilmentprocess.impl.DefaultCheckOrderService" />
+	<bean id="defaultCheckOrderService" class="org.training.fulfilmentprocess.impl.DefaultCheckOrderService" >
+	<property name="modelService" ref="modelService"/>
+	</bean>
 	
 	<!-- Order Splitting -->
 	<alias name="trainingfulfilmentprocessOrderSplittingService" alias="orderSplittingService"/>

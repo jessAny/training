@@ -16,13 +16,28 @@ package org.training.fulfilmentprocess.impl;
 import de.hybris.platform.core.model.order.AbstractOrderEntryModel;
 import de.hybris.platform.core.model.order.OrderModel;
 import de.hybris.platform.core.model.user.CustomerModel;
+import de.hybris.platform.servicelayer.model.ModelService;
 import de.hybris.platform.util.Config;
 
+import org.springframework.beans.factory.annotation.Required;
 import org.training.fulfilmentprocess.CheckOrderService;
 
 
 public class DefaultCheckOrderService implements CheckOrderService
 {
+	private ModelService modelService;
+
+	protected ModelService getModelService()
+	{
+		return modelService;
+	}
+
+	@Required
+	public void setModelService(final ModelService modelService)
+	{
+		this.modelService = modelService;
+	}
+
 
 	@Override
 	public boolean check(final OrderModel order)
@@ -87,6 +102,7 @@ public class DefaultCheckOrderService implements CheckOrderService
 
 			final CustomerModel customerModel = (CustomerModel) order.getUser();
 			customerModel.setIsLucky(Boolean.TRUE);
+			getModelService().save(customerModel);
 			return true;
 
 		}

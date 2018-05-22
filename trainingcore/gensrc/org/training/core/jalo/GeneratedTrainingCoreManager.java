@@ -1,7 +1,7 @@
 /*
  * ----------------------------------------------------------------
  * --- WARNING: THIS FILE IS GENERATED AND WILL BE OVERWRITTEN! ---
- * --- Generated at May 22, 2018 12:48:35 AM                    ---
+ * --- Generated at May 22, 2018 11:59:27 AM                    ---
  * ----------------------------------------------------------------
  */
 package org.training.core.jalo;
@@ -14,6 +14,9 @@ import de.hybris.platform.jalo.SessionContext;
 import de.hybris.platform.jalo.extension.Extension;
 import de.hybris.platform.jalo.type.ComposedType;
 import de.hybris.platform.jalo.type.JaloGenericCreationException;
+import de.hybris.platform.jalo.user.Customer;
+import de.hybris.platform.jalo.user.User;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import org.training.core.constants.TrainingCoreConstants;
@@ -32,6 +35,9 @@ public abstract class GeneratedTrainingCoreManager extends Extension
 	static
 	{
 		final Map<String, Map<String, AttributeMode>> ttmp = new HashMap();
+		Map<String, AttributeMode> tmp = new HashMap<String, AttributeMode>();
+		tmp.put("isLucky", AttributeMode.INITIAL);
+		ttmp.put("de.hybris.platform.jalo.user.Customer", Collections.unmodifiableMap(tmp));
 		DEFAULT_INITIAL_ATTRIBUTES = ttmp;
 	}
 	@Override
@@ -154,6 +160,79 @@ public abstract class GeneratedTrainingCoreManager extends Extension
 	public String getName()
 	{
 		return TrainingCoreConstants.EXTENSIONNAME;
+	}
+	
+	/**
+	 * <i>Generated method</i> - Getter of the <code>Customer.isLucky</code> attribute.
+	 * @return the isLucky - Whether the user is lucky
+	 */
+	public Boolean isIsLucky(final SessionContext ctx, final Customer item)
+	{
+		return (Boolean)item.getProperty( ctx, TrainingCoreConstants.Attributes.Customer.ISLUCKY);
+	}
+	
+	/**
+	 * <i>Generated method</i> - Getter of the <code>Customer.isLucky</code> attribute.
+	 * @return the isLucky - Whether the user is lucky
+	 */
+	public Boolean isIsLucky(final Customer item)
+	{
+		return isIsLucky( getSession().getSessionContext(), item );
+	}
+	
+	/**
+	 * <i>Generated method</i> - Getter of the <code>Customer.isLucky</code> attribute. 
+	 * @return the isLucky - Whether the user is lucky
+	 */
+	public boolean isIsLuckyAsPrimitive(final SessionContext ctx, final Customer item)
+	{
+		Boolean value = isIsLucky( ctx,item );
+		return value != null ? value.booleanValue() : false;
+	}
+	
+	/**
+	 * <i>Generated method</i> - Getter of the <code>Customer.isLucky</code> attribute. 
+	 * @return the isLucky - Whether the user is lucky
+	 */
+	public boolean isIsLuckyAsPrimitive(final Customer item)
+	{
+		return isIsLuckyAsPrimitive( getSession().getSessionContext(), item );
+	}
+	
+	/**
+	 * <i>Generated method</i> - Setter of the <code>Customer.isLucky</code> attribute. 
+	 * @param value the isLucky - Whether the user is lucky
+	 */
+	public void setIsLucky(final SessionContext ctx, final Customer item, final Boolean value)
+	{
+		item.setProperty(ctx, TrainingCoreConstants.Attributes.Customer.ISLUCKY,value);
+	}
+	
+	/**
+	 * <i>Generated method</i> - Setter of the <code>Customer.isLucky</code> attribute. 
+	 * @param value the isLucky - Whether the user is lucky
+	 */
+	public void setIsLucky(final Customer item, final Boolean value)
+	{
+		setIsLucky( getSession().getSessionContext(), item, value );
+	}
+	
+	/**
+	 * <i>Generated method</i> - Setter of the <code>Customer.isLucky</code> attribute. 
+	 * @param value the isLucky - Whether the user is lucky
+	 */
+	public void setIsLucky(final SessionContext ctx, final Customer item, final boolean value)
+	{
+		setIsLucky( ctx, item, Boolean.valueOf( value ) );
+	}
+	
+	/**
+	 * <i>Generated method</i> - Setter of the <code>Customer.isLucky</code> attribute. 
+	 * @param value the isLucky - Whether the user is lucky
+	 */
+	public void setIsLucky(final Customer item, final boolean value)
+	{
+		setIsLucky( getSession().getSessionContext(), item, value );
 	}
 	
 }

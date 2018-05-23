@@ -26,8 +26,7 @@
 		</description>
 		<name>productImage</name>
 		<function-class>de.hybris.platform.acceleratorstorefrontcommons.tags.Functions</function-class>
-		<function-signature>de.hybris.platform.commercefacades.product.data.ImageData
-			getPrimaryImageForProductAndFormat(de.hybris.platform.commercefacades.product.data.ProductData,java.lang.String)</function-signature>
+		<function-signature>de.hybris.platform.commercefacades.product.data.ImageData getPrimaryImageForProductAndFormat(de.hybris.platform.commercefacades.product.data.ProductData,java.lang.String)</function-signature>
 	</function>
 
 	<function>
@@ -36,8 +35,7 @@
 		</description>
 		<name>productCodeImage</name>
 		<function-class>de.hybris.platform.acceleratorstorefrontcommons.tags.Functions</function-class>
-		<function-signature>de.hybris.platform.commercefacades.product.data.ImageData
-			getImageForProductCode(de.hybris.platform.commercefacades.product.data.ProductData,java.lang.String,java.lang.String)</function-signature>
+		<function-signature>de.hybris.platform.commercefacades.product.data.ImageData getImageForProductCode(de.hybris.platform.commercefacades.product.data.ProductData,java.lang.String,java.lang.String)</function-signature>
 	</function>
 
 	<function>
@@ -46,8 +44,7 @@
 		</description>
 		<name>storeImage</name>
 		<function-class>de.hybris.platform.acceleratorstorefrontcommons.tags.Functions</function-class>
-		<function-signature>de.hybris.platform.commercefacades.product.data.ImageData
-			getImageForStoreAndFormat(de.hybris.platform.commercefacades.storelocator.data.PointOfServiceData,java.lang.String))</function-signature>
+		<function-signature>de.hybris.platform.commercefacades.product.data.ImageData getImageForStoreAndFormat(de.hybris.platform.commercefacades.storelocator.data.PointOfServiceData,java.lang.String))</function-signature>
 	</function>
 
 	<function>
@@ -56,8 +53,7 @@
 		</description>
 		<name>doesAppliedPromotionExistForOrderEntry</name>
 		<function-class>de.hybris.platform.acceleratorstorefrontcommons.tags.Functions</function-class>
-		<function-signature>boolean
-			doesAppliedPromotionExistForOrderEntry(de.hybris.platform.commercefacades.order.data.CartData,int)</function-signature>
+		<function-signature>boolean doesAppliedPromotionExistForOrderEntry(de.hybris.platform.commercefacades.order.data.CartData,int)</function-signature>
 	</function>
 
 	<function>
@@ -66,8 +62,7 @@
 		</description>
 		<name>doesPotentialPromotionExistForOrderEntry</name>
 		<function-class>de.hybris.platform.acceleratorstorefrontcommons.tags.Functions</function-class>
-		<function-signature>boolean
-			doesPotentialPromotionExistForOrderEntry(de.hybris.platform.commercefacades.order.data.CartData,int)</function-signature>
+		<function-signature>boolean doesPotentialPromotionExistForOrderEntry(de.hybris.platform.commercefacades.order.data.CartData,int)</function-signature>
 	</function>
 
 	<function>
@@ -94,8 +89,7 @@
 		</description>
 		<name>evaluateRestrictions</name>
 		<function-class>de.hybris.platform.acceleratorstorefrontcommons.tags.Functions</function-class>
-		<function-signature>boolean
-			evaluateRestrictions(de.hybris.platform.cms2.model.contents.components.AbstractCMSComponentModel)</function-signature>
+		<function-signature>boolean evaluateRestrictions(de.hybris.platform.cms2.model.contents.components.AbstractCMSComponentModel)</function-signature>
 	</function>
 
 	<function>

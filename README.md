@@ -1,4 +1,4 @@
-# training
+# training 1
 hyb-training
 add this to attribute in core-items.xml in platform
 
